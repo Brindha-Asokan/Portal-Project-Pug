@@ -1,0 +1,171 @@
+<!DOCTYPE html >
+<html> 
+  <head> 
+    <title>Login Page</title>
+    <style>
+       body
+{
+    display:grid;
+    grid-template-rows: 125px 1fr;
+    align-items: center;
+    background-color: gray;
+}
+.heading
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header
+{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+/* Body Content */
+.log-content
+{
+    padding-top: 25px;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+.login-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 500px;
+    margin-left: 100px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(120deg,rgb(229, 211, 211),rgb(241, 234, 234),rgb(142, 191, 207));
+}
+.login-img
+{
+    padding-top: 25px;
+    height: 150px;
+    width: 150px;
+}
+.user, .password
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.user-label, .password-label
+{
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    margin-bottom: 10px;
+    padding-left: 70px;
+    padding-right: 50px;
+    border-style: none;
+    position: relative;
+    left: -70px;
+    z-index: 1;
+}
+.user-icon
+{
+    height: 28px;
+    width: 28px;
+}
+.icon-section
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 5px;
+    z-index: 2;
+    padding-left: 70px;
+}
+.vertical-line
+{
+    height: 35px;
+    width: 25px;
+    position: relative;
+    bottom: 5px;
+    z-index: 2;
+    padding-top: 8px;
+}
+.password-label::placeholder, .user-label::placeholder
+{
+    font-size: 10px;
+    color:rgb(188, 184, 184);
+}
+.password-label:hover, .user-label:hover
+{
+    box-shadow: gray 1px 2px 3px;
+}
+.password-label input:focus + label 
+{
+    border: 3px solid white;
+    background-color: black;
+  }
+.remember
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #35afe8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.remember-text
+{
+    padding-right: 40px;
+}
+.rem-checkbox, #login
+{
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+}
+.rem-checkbox:hover, #login:hover
+{
+    cursor: pointer;
+    box-shadow: gray 1px 2px 3px;
+}
+#login
+{
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: #35afe8;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <p class="heading">Floor Cleaning System Login</p>
+    </div>
+    <div class="log-content">
+      <div class="login-content">
+        <div><img class="login-img" src="/Pictures/group.png" alt="Login Picutre"/></div>
+        <div class="user">
+          <div class="icon-section"><img class="user-icon" src="/Pictures/UserIcon.webp"/><img class="vertical-line" src="/Pictures/vertical_line.jpg"/></div>
+          <div>
+            <input class="user-label" type="text" name="username" placeholder="USERNAME" required="required"/>
+          </div>
+        </div>
+        <div class="password">
+          <div class="icon-section"><img class="user-icon" src="/Pictures/Lock_Icon.jpg"/><img class="vertical-line" src="/Pictures/vertical_line.jpg"/></div>
+          <div></div>
+          <input class="password-label" type="password" name="password" placeholder="**************" required="required"/>
+        </div>
+        <div class="remember">
+          <input class="rem-checkbox" type="checkbox" name="remember"/>
+          <p class="remember-text">Remember me</p>
+          <p class="forgot-password">Forgot Password?</p>
+        </div>
+        <div>
+          <button id="login">LOGIN</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
