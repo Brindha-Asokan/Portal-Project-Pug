@@ -1,0 +1,31 @@
+doctype html 
+html 
+ head 
+  title Login Page
+  style 
+   include Styles/login.css
+ body
+  div.header
+   p.heading Floor Cleaning System Login
+  div.log-content
+   div.login-content
+    div
+     img(class="login-img" src='/Pictures/group.png', alt="Login Picutre")
+    div.user
+     div.icon-section
+      img(class="user-icon" src="/Pictures/UserIcon.webp")
+      img(class="vertical-line" src="/Pictures/vertical_line.jpg")
+     div
+      input(class="user-label" type="text" name="username" placeholder="USERNAME" required)
+    div.password
+     div.icon-section
+      img(class="user-icon" src="/Pictures/Lock_Icon.jpg")
+      img(class="vertical-line" src="/Pictures/vertical_line.jpg")
+     div
+     input(class="password-label" type="password" name="password" placeholder="**************" required)
+    div.remember
+     input(class="rem-checkbox" type="checkbox" name="remember") 
+     p.remember-text Remember me
+     p.forgot-password Forgot Password?
+    div
+     button#login LOGIN
